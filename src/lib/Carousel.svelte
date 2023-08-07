@@ -6,7 +6,8 @@
 
 
     const passNameDisplay = {
-        "EXAMPLE_TYPE":"examplepass"
+        "EXAMPLE_TYPE":"examplepass",
+        "MASQR":"Masquerade ball"
     }
     // @ts-nocheck
 
