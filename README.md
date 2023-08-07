@@ -1,38 +1,23 @@
-# create-svelte
+# SIMPLE TICKET PORTAL
+***
+Developed by Aaryan D of MAHE (MIT) BLR
+***
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+The main goal of this system is to allow for an easy ticket access, verification and seamless event management.
 
-## Creating a project
+This system is forked from the Solstice ticketing system made for the solstice tech fest The source code for the entire website is 
+available [here](https://github.com/notarib-catcher/solstice-msite-sveltk/).
+That system is much larger, more complex and designed for more involved deployment and maintenance.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The Solstice solution supports many more features than this one, however, this solution is easier to deploy, host and maintain, even for a
+non-technical individual with the help of some basic tutorials and reading the documentation.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+This particular repository/project only contains the frontend system responsible for showing ticket 
+details to an attendee. The system also includes a Node.js based backend for handling ticket data and a mobile app for 
+scanning and verifying tickets.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Authentication is handled by Google Social Sign-on and SvelteKitAuth.
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+***
+This project is a work in progress. Further documentation will be added as the project itself becomes deployment-ready!
+***
