@@ -54,7 +54,7 @@
     }
 
 </script>
-<div class=" flex items-center justify-center h-screen w-screen text-white ">
+<div class=" flex items-center justify-center h-screen w-screen text-white overflow-hidden ">
     {#if codeDataArr.length == 0}
         <div>
             {#if !error}

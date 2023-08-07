@@ -9,7 +9,8 @@ html {
     overflow-y: scroll;
     overflow-x: hidden;
     font-family:  'Poppins', sans-serif;
-    user-select: none;
+    user-select: none
+;
 }
 
 html::-webkit-scrollbar {
