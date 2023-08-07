@@ -3,7 +3,7 @@
     import {browser} from "$app/environment";
     const pushGithub = async () => {
         if(browser){
-            window.location = "https://github.com/notarib-catcher"
+            window.location = "https://github.com/notarib-catcher/SimpleTicketing-Pass-Viewer"
         }
     }
 </script>
