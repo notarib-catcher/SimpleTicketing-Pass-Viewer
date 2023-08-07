@@ -7,3 +7,9 @@
     <slot />
 </div>
 <Footer />
+
+<style>
+    div{
+        overflow: hidden;
+    }
+</style>

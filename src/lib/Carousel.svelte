@@ -56,7 +56,7 @@
 </script>
 <div class=" flex items-center justify-center h-screen w-screen text-white overflow-hidden ">
     {#if codeDataArr.length == 0}
-        <div>
+        <div class=" text-gray-400 font-semibold">
             {#if !error}
                 No passes to display
             {:else}
