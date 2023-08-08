@@ -64,7 +64,7 @@
         {/if}
     </div>
 {:else}
-    <div class=" items-center justify-center max-sm:h-full max-sm:w-screen z-0  absolute max-sm:rounded-none text-white  flex flex-col px-10 pb-10 pt-4 rounded-lg">
+    <div class=" loadinafterimg items-center justify-center max-sm:h-full max-sm:w-screen z-0  absolute max-sm:rounded-none text-white  flex flex-col px-10 pb-10 pt-4 rounded-lg">
         <div class="w-full  text-center bg-clip-text text-[#f8f7e6] titleshadow text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl bchcry  mb-5 sm:mb-10">
             MASQUERADE BALL
         </div>
@@ -93,6 +93,27 @@
 <style>
     .titleshadow{
         /*text-shadow: 3px 2px #523e00;*/
+    }
+
+    @keyframes animloadinafterimg {
+        0%{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        50%{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .loadinafterimg{
+        animation-name: animloadinafterimg;
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
     }
 </style>
 

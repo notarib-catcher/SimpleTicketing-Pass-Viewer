@@ -4,9 +4,9 @@
 </script>
 
 
-    <img src={mask} height="100px" class="mclass1">
+    <img src={mask} height="100px" class="loadinafterimg mclass1">
 
-<button class=" footercredit p-2 bg-white rounded-lg hovtext transition-all duration-200 hover:scale-110 active:border-blue-500 bg-opacity-10 hover:bg-opacity-20" on:click={() => {signIn('google',{callbackUrl:"/pass?signedin"})}}>
+<button class=" loadinafterimg footercredit p-2 bg-white rounded-lg hovtext transition-all duration-200 hover:scale-110 active:border-blue-500 bg-opacity-10 hover:bg-opacity-20" on:click={() => {signIn('google',{callbackUrl:"/pass?signedin"})}}>
     <div class=" innertxtcred bchcry uppercase bg-clip-text bg-opacity-100  text-transparent transition-all duration-300 whitespace-nowrap  ">
         Login with Google
     </div>
@@ -18,6 +18,27 @@
     .mclass1{
         filter: invert(1);
         height: 20%;
+    }
+
+    @keyframes animloadinafterimg {
+        0%{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        50%{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .loadinafterimg{
+        animation-name: animloadinafterimg;
+        animation-duration: 800ms;
+        animation-fill-mode: forwards;
     }
 
 
