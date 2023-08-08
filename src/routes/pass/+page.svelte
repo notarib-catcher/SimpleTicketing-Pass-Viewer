@@ -34,7 +34,7 @@
 </div>
 {#if isAuth}
     <div class=" fixed top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn backgroundpan">
-        <div class="bg-clip-text bg-gradient-to-bl from-blue-700 to-pink-900 text-transparent">
+        <div class="bg-clip-text text-[#e4c359]  text-transparent">
             Welcome, {data.user.name}!
         </div>
 
