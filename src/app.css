@@ -6,7 +6,7 @@
 html {
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     font-family:  'poppins' ,sans-serif;
     user-select: none;
