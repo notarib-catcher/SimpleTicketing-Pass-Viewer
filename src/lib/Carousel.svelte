@@ -64,7 +64,7 @@
         {/if}
     </div>
 {:else}
-    <div class=" items-center justify-center max-sm:h-full max-sm:w-screen z-0  absolute text-white bg-gradient-to-tr from-[#49243d] via-[#442b51] to-[#2c125c] flex flex-col px-10 pb-10 pt-4 rounded-lg">
+    <div class=" items-center justify-center max-sm:h-full max-sm:w-screen z-0  absolute max-sm:rounded-none text-white bg-gradient-to-tr from-[#49243d] via-[#442b51] to-[#2c125c] flex flex-col px-10 pb-10 pt-4 rounded-lg">
         <div class="w-full  text-center bg-clip-text text-transparent bg-gradient-to-r text-2xl font-semibold via-[#59e8f8] to-[#6088f9] from-[#6088f9]  mb-4">
             Your Pass{#if codeDataArr.length > 1}es{/if}
         </div>
