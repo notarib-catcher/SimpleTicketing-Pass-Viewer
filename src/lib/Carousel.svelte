@@ -65,7 +65,7 @@
     </div>
 {:else}
     <div class=" items-center justify-center max-sm:h-full max-sm:w-screen z-0  absolute max-sm:rounded-none text-white  flex flex-col px-10 pb-10 pt-4 rounded-lg">
-        <div class="w-full  text-center bg-clip-text text-[#f8f7e6] titleshadow text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl bchcry   mb-10">
+        <div class="w-full  text-center bg-clip-text text-[#f8f7e6] titleshadow text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl bchcry  mb-5 sm:mb-10">
             MASQUERADE BALL
         </div>
         <div class=" bg-[#e6e6e6] px-4 pt-4 rounded-lg shadow-2xl max-sm:w-fit">
