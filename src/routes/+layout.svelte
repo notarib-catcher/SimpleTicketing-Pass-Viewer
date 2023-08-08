@@ -1,7 +1,7 @@
 <script>
     import "../app.css"
     import Footer from "$lib/Footer.svelte";
-    import bg from  "../assets/bgggg.jpg"
+    import bg from  "../assets/closetedbg.webp"
 
 
 
