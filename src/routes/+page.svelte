@@ -1,19 +1,39 @@
 <script>
     import {signIn} from "@auth/sveltekit/client";
+    import mask from "../assets/Mmask.png"
 </script>
 
-<button class=" p-2 border-2 border-[#1a0523] bg-opacity-30 bg-black rounded-lg hovtext transition-all duration-200 hover:font-semibold bg-black hover:scale-110 active:border-blue-500 bg-opacity-5 hover:bg-opacity-20" on:click={() => {signIn('google',{callbackUrl:"/pass?signedin"})}}>
-    <div class=" font-semibold bg-clip-text text-transparent transition-all duration-300  bg-gradient-to-l from-blue-500 whitespace-nowrap to-pink-700 ">
+
+    <img src={mask} height="100px" class="mclass1">
+
+<button class=" footercredit p-2 bg-white rounded-lg hovtext transition-all duration-200 hover:scale-110 active:border-blue-500 bg-opacity-10 hover:bg-opacity-20" on:click={() => {signIn('google',{callbackUrl:"/pass?signedin"})}}>
+    <div class=" innertxtcred bchcry uppercase bg-clip-text bg-opacity-100  text-transparent transition-all duration-300 whitespace-nowrap  ">
         Login with Google
     </div>
 </button>
 
 <style>
 
-    .hovtext:hover > div{
-        color: white;
+
+    .mclass1{
+        filter: invert(1);
+        height: 20%;
     }
-    .hovtext:focus > div{
-        color: white;
+
+
+     .footercredit{
+     }
+
+    .footercredit:hover > .innertxtcred {
+        background-color: #e4ab32;
     }
+
+    .footercredit:focus > .innertxtcred {
+        background-color: #e4ab32;
+    }
+
+    .innertxtcred {
+        background-color: #f8f7e6;
+    }
+
 </style>
