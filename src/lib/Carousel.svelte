@@ -2,6 +2,7 @@
     import { browser } from "$app/environment"
     import QRCode from "$lib/QRJS.svelte"
     import {onMount} from "svelte";
+    import noTickets from "../assets/notickets.webp"
 
 
 
@@ -77,7 +78,10 @@
 {#if codeDataArr.length == 0}
     <div class=" text-gray-400 font-semibold">
         {#if !error}
-            No passes to display
+            <div class="relative text-center">
+                <div class="absolute z-20 top-[-15px] text-white translate-x-[20px] bchcry uppercase">No tickets?</div>
+                <img src = {noTickets} class=" translate-y-2 h-[200px] invmgmind border-black border-2">
+            </div>
         {:else}
             Error, Please contact support
         {/if}
@@ -117,7 +121,7 @@
 
 <style>
     .titleshadow{
-        /*text-shadow: 3px 2px #523e00;*/
+        text-shadow: 3px 2px #523e00;
     }
 
     @keyframes animloadinafterimg {
@@ -139,6 +143,14 @@
         animation-name: animloadinafterimg;
         animation-duration: 800ms;
         animation-fill-mode: forwards;
+    }
+
+    .invmgmind{
+        filter: invert(90%);
+    }
+
+    .blur-box {
+        box-shadow: 0 0 200px 100px #1f1f1f;
     }
 </style>
 
