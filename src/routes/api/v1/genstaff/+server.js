@@ -21,7 +21,8 @@ export const POST = async ({request}) => {
     if(!secret){
         throw error(401,"NO_SECRET")
     }
-    if(secret != staff_secret){
+    if(secret !== staff_secret){
+        console.log(secret + "!=" + staff_secret)
         throw error(403, "INVALID_SECRET")
     }
 
