@@ -1,6 +1,7 @@
 <script>
     import { browser } from "$app/environment"
     import QRCode from "$lib/QRJS.svelte"
+    import {onMount} from "svelte";
 
 
 
@@ -52,6 +53,24 @@
             error = true;
         }
     }
+    const delay = (time) => new Promise((resolve, reject) => setTimeout(resolve, time))
+    let titleTxt
+    onMount(async () => {
+        if(browser){
+            let restOfTitle = "ASQUERADE BALL"
+            let i = 0
+            for(i = 0; i < restOfTitle.length; i++){
+                titleTxt.textContent += restOfTitle[i]
+
+                //whitespaces cause it to pause for a sec which is jarring, skip them
+                if(restOfTitle[i+1] === ' '){
+                    i++
+                    titleTxt.textContent += restOfTitle[i]
+                }
+                await delay(70)
+            }
+        }
+    })
 
 </script>
 
@@ -65,8 +84,8 @@
     </div>
 {:else}
     <div class=" loadinafterimg items-center justify-center max-sm:h-full max-sm:w-screen z-0  absolute max-sm:rounded-none text-white  flex flex-col px-10 pb-10 pt-4 rounded-lg">
-        <div class="w-full  text-center bg-clip-text text-[#f8f7e6] titleshadow text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl bchcry  mb-5 sm:mb-10">
-            MASQUERADE BALL
+        <div bind:this={titleTxt} class="w-full  text-center bg-clip-text text-[#f8f7e6] titleshadow text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl bchcry  mb-5 sm:mb-10">
+            M
         </div>
         <div class=" bg-[#FAF6E1] px-4 pt-4 rounded-lg shadow-2xl max-sm:w-fit">
             {#key currentData}
