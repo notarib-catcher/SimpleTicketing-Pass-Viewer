@@ -79,7 +79,7 @@
     <div class=" text-gray-400 font-semibold">
         {#if !error}
             <div class="relative text-center">
-                <div class="absolute z-20 top-[-15px] text-white translate-x-[15px] bchcry uppercase">No tickets?</div>
+                <div class="absolute z-20 top-[-15px] text-white translate-x-[30px] bchcry uppercase">No tickets?</div>
                 <img src = {noTickets} class=" translate-y-2 h-[200px] invmgmind border-black border-2">
             </div>
         {:else}
