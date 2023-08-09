@@ -33,7 +33,7 @@
 </script>
 
 <div class="flex flex-col items-center justify-center">
-    <div class=" bchcry text-white text-3xl text-center">
+    <div class=" bchcry text-white text-2xl md:text-3xl text-center">
         404: You seem to be alone here
     </div>
     <div class="text-white text-center font-light mt-2">
