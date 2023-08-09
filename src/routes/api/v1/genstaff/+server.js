@@ -2,7 +2,9 @@ import * as dotenv from 'dotenv' ;
 dotenv.config()
 
 import {error} from "@sveltejs/kit";
-import {v4 as uuidv4} from 'uuid';
+
+import jwt from 'jsonwebtoken'
+const {sign} = jwt
 const webprivkey = process.env.WEBPRIVKEY?.replaceAll("$n$","\n")
 const staff_secret = process.env.PRESHARED_SECRET
 
