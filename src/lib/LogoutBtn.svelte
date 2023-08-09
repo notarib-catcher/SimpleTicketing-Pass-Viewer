@@ -5,7 +5,10 @@
     const onClickLogout = async () => {
         LGText.hidden = true
         spinner.hidden = false
-        signOut({callbackUrl:"/"})
+        setTimeout(() => {
+            signOut({callbackUrl:"/"})            
+        }, 1000);
+
     }
 </script>
 <div class="fixed top-1 right-1 flex flex-row items-center loadinwithimg">
