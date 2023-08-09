@@ -1,14 +1,10 @@
 <script>
     import {signOut} from "@auth/sveltekit/client";
     export let name;
-    let spinner, LGText
+    let LGText
     const onClickLogout = async () => {
-        LGText.hidden = true
-        spinner.hidden = false
-        setTimeout(() => {
-            signOut({callbackUrl:"/"})            
-        }, 1000);
-
+        LGText.innerText = "WAIT..."
+        signOut({callbackUrl:"/"})
     }
 </script>
 <div class="fixed top-1 right-1 flex flex-row items-center loadinwithimg">
@@ -16,15 +12,13 @@
         Welcome, {name}
     </div>
     <button class="focus:animate-pulse mr-1 ml-2 bg-opacity-5 p-2 rounded-xl bchcry uppercase text-white hover:bg-white hover:bg-opacity-10 bg-white focus:bg-opacity-10 transition-all duration-300 font-light flex flex-row " on:click={onClickLogout}>
-        <svg bind:this={spinner} width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" hidden><circle class="spinner_qM83" cx="4" cy="12" r="3"/><circle class="spinner_qM83 spinner_oXPr" cx="12" cy="12" r="3"/><circle class="spinner_qM83 spinner_ZTLf" cx="20" cy="12" r="3"/></svg>
         <div bind:this={LGText}>Logout</div>
     </button>
 </div>
 
 <style>
     .spinner_qM83{
-        animation:spinner_8HQG 1.05s infinite
-    }
+        animation:spinner_8HQG 1.05s infinite    }
     
     .spinner_oXPr{
         animation-delay:.1s
