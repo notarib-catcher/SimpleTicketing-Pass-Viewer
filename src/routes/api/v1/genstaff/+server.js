@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv' ;
 dotenv.config()
-
+import axios from 'axios'
 import {error} from "@sveltejs/kit";
 
 import jwt from 'jsonwebtoken'
