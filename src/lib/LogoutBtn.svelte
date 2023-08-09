@@ -18,7 +18,8 @@
 
 <style>
     .spinner_qM83{
-        animation:spinner_8HQG 1.05s infinite    }
+        animation:spinner_8HQG 1.05s infinite
+    }
     
     .spinner_oXPr{
         animation-delay:.1s
