@@ -33,11 +33,9 @@
     
 </script>
 
-<div class="z-10">
-    <LogoutBtn name={data.session.user.name}/>
-</div>
+
 {#if isAuth}
-    <div class=" fixed z-[100] top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn backgroundpan">
+    <div class=" fixed z-20 top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn backgroundpan">
         <div class="bg-clip-text text-[#e4c359]  text-transparent">
             Welcome, {data.user.name}!
         </div>
@@ -46,12 +44,15 @@
 
 {/if}
 {#if isFail}
-    <div class=" fixed z-[100] top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn">
+    <div class=" fixed z-20 top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn">
         <div class="bg-clip-text text-[#e4c359]  text-transparent">
             Invalid link
         </div>
     </div>
 {/if}
+<div class="z-10">
+    <LogoutBtn name={data.session.user.name}/>
+</div>
 <Carousel codeDataArr = {passstrArr} typeArr={passtypeArr} />
 
 
@@ -72,7 +73,7 @@
 
     @keyframes login{
         0%{
-            transform: translateY(-55px);
+            transform: translateY(-100px);
         }
         25%{
             transform: translateY(0px);
@@ -81,7 +82,7 @@
             transform: translateY(0px);
         }
         100%{
-            transform: translateY(-55px);
+            transform: translateY(-100px);
         }
     }
 </style>
