@@ -5,7 +5,7 @@ Developed by Aaryan D of MAHE (MIT) BLR
 
 The main goal of this system is to allow for an easy ticket access, verification and seamless event management.
 
-This system is forked from the Solstice ticketing system made for the solstice tech fest The source code for the entire website is 
+This system is forked from the Solstice ticketing system made for the solstice tech fest. The source code for the entire website is 
 available [here](https://github.com/notarib-catcher/solstice-msite-sveltk/).
 That system is much larger, more complex and designed for more involved deployment and maintenance.
 
