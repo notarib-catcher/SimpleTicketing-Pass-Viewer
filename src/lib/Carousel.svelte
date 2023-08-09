@@ -7,7 +7,7 @@
 
     const passNameDisplay = {
         "EXAMPLE_TYPE":"examplepass",
-        "MASQR":"Event Pass"
+        "MASQR": "2 September 2023, 6PM"
     }
     // @ts-nocheck
 
@@ -68,12 +68,18 @@
         <div class="w-full  text-center bg-clip-text text-[#f8f7e6] titleshadow text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl bchcry  mb-5 sm:mb-10">
             MASQUERADE BALL
         </div>
-        <div class=" bg-[#e6e6e6] px-4 pt-4 rounded-lg shadow-2xl max-sm:w-fit">
+        <div class=" bg-[#FAF6E1] px-4 pt-4 rounded-lg shadow-2xl max-sm:w-fit">
             {#key currentData}
                 <QRCode codeValue = {currentData} squareSize = {300}/>
             {/key}
             <div class="w-full text-center text-gray-900 text-2xl font-extrabold  mt-2 mb-3 ">
-                {nameArr[cursor]}
+                {#if typeArr[cursor] == "MASQR"}
+                    <div class=" w-full text-xl text-center">
+                        6PM, 2<sup>nd</sup> September '23
+                    </div>
+                {:else}
+                    {nameArr[cursor]}
+                {/if}
             </div>
 
         </div>
@@ -84,7 +90,7 @@
             </div>
         {/if}
         <div class=" w-full text-center pt-10 text-[#f8f7e6] ">
-            This QR grants event access.<br>Take a screenshot, <i>Just in case.</i>
+            This QR is your ticket.<br>Take a screenshot, <i>Just in case.</i>
         </div>
 
     </div>
