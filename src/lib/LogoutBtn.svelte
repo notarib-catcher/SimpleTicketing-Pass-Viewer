@@ -1,7 +1,7 @@
 <script>
     import {signOut} from "@auth/sveltekit/client";
     export let name;
-    let LGText
+    let LGText;
     const onClickLogout = async () => {
         LGText.innerText = "WAIT..."
         signOut({callbackUrl:"/"})
