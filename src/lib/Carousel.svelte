@@ -57,7 +57,7 @@
     let titleTxt
     onMount(async () => {
         if(browser){
-            let restOfTitle = "ASQUERADE BALL"
+            let restOfTitle = "MASQUERADE BALL"
             let i = 0
             for(i = 0; i < restOfTitle.length; i++){
                 titleTxt.textContent += restOfTitle[i]
@@ -85,7 +85,7 @@
 {:else}
     <div class=" loadinafterimg items-center justify-center max-sm:h-full max-sm:w-screen z-0  absolute max-sm:rounded-none text-white  flex flex-col px-10 pb-10 pt-4 rounded-lg">
         <div bind:this={titleTxt} class="w-full  text-center bg-clip-text text-[#f8f7e6] titleshadow text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl bchcry  mb-5 sm:mb-10">
-            M
+
         </div>
         <div class=" bg-[#FAF6E1] px-4 pt-4 rounded-lg shadow-2xl max-sm:w-fit">
             {#key currentData}
