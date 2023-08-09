@@ -51,16 +51,17 @@ export const POST = async ({request}) => {
     console.count()
 
 
-    //stop displaying any older passES
+    //stop displaying any older passes if setup like that
 
-    await passes.updateMany({
-        email: {$eq: email}
-    },{
-        $set:{
-            generated: false
-        }
-    })
-
+    if(process.env.STAFF_PASS_HIDES_OTHERS === "yes"){
+        await passes.updateMany({
+            email: {$eq: email}
+        },{
+            $set:{
+                generated: false
+            }
+        })
+    }
 
 
     await passes.insertOne({
