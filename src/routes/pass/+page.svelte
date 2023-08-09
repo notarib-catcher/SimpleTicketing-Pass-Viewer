@@ -19,24 +19,18 @@
     }
 
     let isAuth = false
-    onMount(() => {
-        if(browser){
-            const urlParams = new URLSearchParams(window.location.search);
-            isAuth = urlParams.has('signedin');
-
-            window.history.pushState({}, document.title, window.location.pathname);
-        }
-    })
-
     let isFail = false
     onMount(() => {
         if(browser){
             const urlParams = new URLSearchParams(window.location.search);
+            isAuth = urlParams.has('signedin');
             isFail = urlParams.has('vfail');
-
             window.history.pushState({}, document.title, window.location.pathname);
         }
     })
+
+    
+    
 </script>
 
 <div class="z-10">
@@ -52,13 +46,11 @@
 
 {/if}
 {#if isFail}
-    <div class=" fixed z-[100] top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn backgroundpan">
+    <div class=" fixed z-[100] top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn">
         <div class="bg-clip-text text-[#e4c359]  text-transparent">
             Invalid link
         </div>
-
     </div>
-
 {/if}
 <Carousel codeDataArr = {passstrArr} typeArr={passtypeArr} />
 
@@ -67,7 +59,7 @@
 
 <style>
     .ModalPopIn{
-        transform: translateY(-100px);
+        /*transform: translateY(-100px);*/
         animation-name: login;
         animation-duration: 4000ms;
         animation-iteration-count: 1;
