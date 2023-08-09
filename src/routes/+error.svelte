@@ -32,10 +32,10 @@
 </script>
 
 <div class="flex flex-col items-center justify-center">
-    <div class=" text-white text-3xl">
+    <div class=" bchcry text-white text-3xl text-center">
         404: You seem to be alone here
     </div>
-    <div>
+    <div class="text-white text-center font-light mt-2">
         Heading back to the party in {count} second{(count > 1) ? "s" : ""}.
     </div>
     
