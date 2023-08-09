@@ -27,15 +27,34 @@
             window.history.pushState({}, document.title, window.location.pathname);
         }
     })
+
+    let isFail = false
+    onMount(() => {
+        if(browser){
+            const urlParams = new URLSearchParams(window.location.search);
+            isFail = urlParams.has('vfail');
+
+            window.history.pushState({}, document.title, window.location.pathname);
+        }
+    })
 </script>
 
 <div class="z-10">
     <LogoutBtn name={data.session.user.name}/>
 </div>
 {#if isAuth}
-    <div class=" fixed top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn backgroundpan">
+    <div class=" fixed z-[100] top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn backgroundpan">
         <div class="bg-clip-text text-[#e4c359]  text-transparent">
             Welcome, {data.user.name}!
+        </div>
+
+    </div>
+
+{/if}
+{#if isFail}
+    <div class=" fixed z-[100] top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-40 w-fit p-2 rounded-lg mx-auto ModalPopIn backgroundpan">
+        <div class="bg-clip-text text-[#e4c359]  text-transparent">
+            Invalid link
         </div>
 
     </div>

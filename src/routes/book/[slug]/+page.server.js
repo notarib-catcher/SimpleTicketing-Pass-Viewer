@@ -33,7 +33,7 @@ export const load= async (event) => {
     }
     let unclaimedpass = await passes.findOne({slug:event.params.slug, unclaimed: true});
     if(!unclaimedpass){
-        throw redirect(302, '/pass')
+        throw redirect(302, '/pass?vfail')
     }
 
     let type = unclaimedpass.type || "DEFAULT"
