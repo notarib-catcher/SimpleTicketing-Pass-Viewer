@@ -9,7 +9,8 @@
 
     const passNameDisplay = {
         "EXAMPLE_TYPE":"examplepass",
-        "MASQR": "2 September 2023, 6PM"
+        "MASQR": "2 September 2023, 6PM",
+        "STAFF": "STAFF ACCESS"
     }
     // @ts-nocheck
 
@@ -108,8 +109,8 @@
         </div>
 
         {#if codeDataArr.length > 1}
-            <div class="w-full text-center bg-clip-text text-transparent bg-gradient-to-r text-2xl  via-[#59e8f8] to-[#6088f9] from-[#6088f9]  mt-4">
-                <button on:click={next} class=" w-fit px-4 rounded-lg h-full active:text-zinc-800 bg-clip-border duration-200">next</button>
+            <div class="w-full text-center bg-clip-text text-transparent text-2xl  mt-4">
+                <button on:click={next} class=" bchcry text-white uppercase w-fit px-4 rounded-lg h-full active:text-zinc-800 bg-clip-border duration-200">next</button>
             </div>
         {/if}
         <div class=" w-full text-center pt-10 text-[#f8f7e6] ">
