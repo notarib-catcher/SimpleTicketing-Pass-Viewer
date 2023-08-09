@@ -37,7 +37,11 @@
         404: You seem to be alone here
     </div>
     <div class="text-white text-center font-light mt-2">
-        Heading back to the party in {count} second{(count > 1) ? "s" : ""}.
+        {#if count > 0}
+            Heading back to the party in {count} second{(count > 1) ? "s" : ""}.
+        {:else}
+            Redirecting you now...
+        {/if}
     </div>
     
 </div>
