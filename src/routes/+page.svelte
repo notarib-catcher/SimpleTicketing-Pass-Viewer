@@ -12,7 +12,7 @@
 </script>
 
 
-    <img src={mask} height="100px" class="loadinafterimg mclass1">
+<img src={mask} height="100px" class="loadinafterimg mclass1">
 
 <button class=" loadinafterimg footercredit p-2 bg-white rounded-lg hovtext transition-all duration-200 hover:scale-110 active:border-blue-500 bg-opacity-10 hover:bg-opacity-20" on:click={loginBtnClick}>
     <div bind:this={loginbtninnertext} class=" innertxtcred bchcry uppercase bg-clip-text bg-opacity-100  text-transparent transition-all duration-300 whitespace-nowrap  ">
