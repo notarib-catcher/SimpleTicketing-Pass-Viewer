@@ -3,7 +3,7 @@
     import mask from "../assets/Mmask.png"
     let loginbtninnertext
     const loginBtnClick = async () => {
-        loginbtninnertext.innerHTML = "You will be redirected soon"
+        loginbtninnertext.innerHTML = "Redirecting you..."
         setTimeout( () => {
             signIn('google',{callbackUrl:"/pass?signedin"})
         }, 200)
