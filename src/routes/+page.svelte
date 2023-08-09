@@ -4,7 +4,10 @@
     let loginbtninnertext
     const loginBtnClick = async () => {
         loginbtninnertext.innerText = "You will be redirected soon"
-        signIn('google',{callbackUrl:"/pass?signedin"})
+        setTimeout( () => {
+            signIn('google',{callbackUrl:"/pass?signedin"})
+        }, 200)
+        
     }
 </script>
 
