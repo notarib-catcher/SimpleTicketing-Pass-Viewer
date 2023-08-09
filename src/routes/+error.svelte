@@ -1,30 +1,32 @@
 <script>
-    import { onMount, onDestroy } from "svelte";
-    import {browser} from "$app/environment"
-    let count = 5
-    let intr1, intr2;
-    onMount(() => {
-        if(browser){
-            intr1 = setInterval(() => {
-                count--;
-            }, 1000)
-
-            const redirect = () => {
-                if(count <= 0){
-                    window.location = "/pass"
-                }
+    import { onMount } from "svelte";
+    import { navigating } from "$app/stores";
+    let count = 5 
+    var intervalled = false
+    var navigate = true
+    $: if($navigating) onNavDisable();
+    const onNavDisable = () => {
+        navigate = false
+    }
+    onMount(()=>{
+        count = 5
+        navigate = true
+        setTimeout(() => {
+            if(navigate){
+                window.location.replace("/pass")
             }
+        }, 5100);
 
-            intr2 = setInterval(redirect, 500)
+        if(!intervalled){
+            setInterval(() => {
+                count--;
+            },1000)
+            intervalled = true
         }
+        
+        
     })
 
-    onDestroy(() => {
-        if(browser){
-            clearInterval(intr1)
-            clearInterval(intr2)
-        }
-    })
     
     
 </script>
