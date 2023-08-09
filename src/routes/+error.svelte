@@ -9,6 +9,7 @@
         navigate = false
     }
     onMount(()=>{
+        window.history.pushState({}, document.title, "/404");
         count = 5
         navigate = true
         setTimeout(() => {
