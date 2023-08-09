@@ -113,7 +113,7 @@
                 <button on:click={next} class=" bchcry text-white uppercase w-fit px-4 rounded-lg h-full active:text-zinc-800 bg-clip-border duration-200">next</button>
             </div>
         {/if}
-        <div class=" w-full text-center pt-10 text-[#f8f7e6] ">
+        <div class=" w-full text-center pt-3 text-[#f8f7e6] ">
             This QR is your ticket.<br>Take a screenshot, <i>Just in case.</i>
         </div>
 
