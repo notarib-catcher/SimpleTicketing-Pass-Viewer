@@ -110,7 +110,7 @@
 
         {#if codeDataArr.length > 1}
             <div class="w-full text-center bg-clip-text text-transparent text-2xl  mt-4">
-                <button on:click={next} class=" bchcry text-white uppercase w-fit px-4 rounded-lg h-full active:text-zinc-800 bg-clip-border duration-200">next</button>
+                <button on:click={next} class=" bchcry text-[#f8f7e6] uppercase w-fit px-4 rounded-lg h-full bg-white bg-opacity-10 active:bg-opacity-30 active:text-zinc-800 duration-200">next</button>
             </div>
         {/if}
         <div class=" w-full text-center pt-3 text-[#f8f7e6] ">
