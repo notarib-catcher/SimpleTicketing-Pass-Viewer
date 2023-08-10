@@ -59,7 +59,7 @@
     let titleTxt
     onMount(async () => {
         if(browser){
-            let restOfTitle = "MASQUERADE BALL"
+            let restOfTitle = "MASQUERADE"
             let i = 0
             for(i = 0; i < restOfTitle.length; i++){
                 titleTxt.textContent += restOfTitle[i]
