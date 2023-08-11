@@ -19,10 +19,10 @@
     <div class=" bg-clip-text text-transparent bg-gradient-to-bl from-blue-500 to-pink-700">
         {#if data.session?.user?.email}
             <div class="bg-white bg-opacity-10 p-3 rounded-2xl mb-2">
-                <div>
+                <div class="text-[#e4c359]">
                     Pass assigned to:
                 </div>
-                <div class=" font-bold text-yellow-500">{data.session.user.email}</div>
+                <div class=" font-bold text-red-600">{data.session.user.email}</div>
             </div>
             <div class="w-full text-center text-[#e4c359] animate-pulse font-semibold">You will be redirected soon</div>
         {:else}
