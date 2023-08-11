@@ -4,11 +4,11 @@
     export let data;
     onMount(() => {
         if(!data.session?.user?.email && data.slug) {
-            setTimeout(()=>{signIn('google',{callbackUrl: `/book/${data.slug}/`})}, 1000)
+            // setTimeout(()=>{signIn('google',{callbackUrl: `/book/${data.slug}/`})}, 1000)
             return
         }
 
-        setTimeout(() => {window.location = '/pass'}, 3000)
+        // setTimeout(() => {window.location = '/pass'}, 3000)
     })
 </script>
 
@@ -24,9 +24,10 @@
                 </div>
                 <div class=" font-bold text-yellow-500">{data.session.user.email}</div>
             </div>
-            <div class="w-full text-center animate-pulse font-semibold">You will be redirected soon</div>
+            <div class="w-full text-center text-[#e4c359] animate-pulse font-semibold">You will be redirected soon</div>
         {:else}
-            <div class="bg-clip-text text-transparent bg-gradient-to-bl from-blue-500 to-pink-700 w-full text-center font-semibold">You need to be logged in! Lets do that first...</div>
+            <div class="bg-clip-text text-transparent bg-[#FAF6E1]  w-full text-center font-semibold">You need to be logged in! Lets do that first...</div>
+            <div class="w-full text-center text-[#e4c359] animate-pulse font-semibold">You will be redirected soon</div>
         {/if}
     </div>
 </div>
