@@ -4,11 +4,11 @@
     export let data;
     onMount(() => {
         if(!data.session?.user?.email && data.slug) {
-            // setTimeout(()=>{signIn('google',{callbackUrl: `/book/${data.slug}/`})}, 1000)
+            setTimeout(()=>{signIn('google',{callbackUrl: `/book/${data.slug}/`})}, 1000)
             return
         }
 
-        // setTimeout(() => {window.location = '/pass'}, 3000)
+        setTimeout(() => {window.location = '/pass'}, 3000)
     })
 </script>
 
