@@ -44,7 +44,7 @@
 {#if isFail}
     <div class=" fixed z-20 top-0  text-2xl font-semibold h-[50px] bg-black bg-opacity-70 w-fit p-2 rounded-lg mx-auto ModalPopIn">
         <div class="bg-clip-text bg-[#e4c359]  text-transparent">
-            Invalid link
+            Link invalid
         </div>
     </div>
 {/if}
