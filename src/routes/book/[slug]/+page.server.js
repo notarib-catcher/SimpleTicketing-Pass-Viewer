@@ -61,7 +61,7 @@ export const load= async (event) => {
                     {
                         title:"Ticket claimed",
                         description: `**${event.params.slug}** claimed by ${session.user.email}`,
-                        timestamp: new Date().getTime()
+                        timestamp: new Date().toISOString()
                     }
                 ]
             }
