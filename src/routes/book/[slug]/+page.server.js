@@ -59,9 +59,13 @@ export const load= async (event) => {
             {
                 embeds:[
                     {
-                        title:"Ticket claimed",
-                        description: `**${event.params.slug}** claimed by ${session.user.email}`,
-                        timestamp: new Date().toISOString()
+                        title:`${event.params.slug}`,
+                        description: `Claimed by **\`${session.user.email}\**`,
+                        timestamp: new Date().toISOString(),
+                        color: 16748800,
+                        footer: {
+                            text: "Closeted-MASQR ticketing logs"
+                        }
                     }
                 ]
             }
