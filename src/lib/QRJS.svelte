@@ -13,7 +13,7 @@
     onMount(() => {
 
         let script = document.createElement('script');
-        script.src = "https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"
+        script.src = "/scripts/qrcode.min.js"
         document.head.append(script);
 
         script.onload = function() {
