@@ -60,7 +60,7 @@ export const load= async (event) => {
                 embeds:[
                     {
                         title:`${event.params.slug}`,
-                        description: `Claimed by **\`${session.user.email}\**`,
+                        description: `Claimed by **\`${session.user.email}\`**`,
                         timestamp: new Date().toISOString(),
                         color: 16748800,
                         footer: {
