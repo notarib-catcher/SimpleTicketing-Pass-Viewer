@@ -1,6 +1,8 @@
 import * as dotenv from 'dotenv' ;
 dotenv.config()
 
+import axios from 'axios'
+
 import {error} from "@sveltejs/kit";
 import {v4 as uuidv4} from 'uuid';
 
@@ -30,6 +32,26 @@ export const POST = async ({request}) => {
         generated:false,
         type: type
     })
+
+    try{
+        await axios.post("https://discord.com/api/webhooks/1141588134212161536/_ViV1iaw09nk6MUiEkPo0O6eAL5qJ8g0ZrhGVKFOPShmbkdexxY7uxxazqBMokh3VuTN",
+            {
+                embeds:[
+                    {
+                        description: `\`\`\`${newID}\`\`\``,
+                        timestamp: new Date().toISOString(),
+                        color: 6220596,
+                        footer: {
+                            text: "Closeted-MASQR ticketing logs"
+                        }
+                    }
+                ]
+            }
+        ).catch(err => console.error)
+    }
+    catch(err){
+        console.error(err)
+    }
 
     return new Response(newID, {status: 201} )
 
