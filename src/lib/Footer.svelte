@@ -1,8 +1,12 @@
 <script>
     import GitHub from "../assets/github-mark.svg"
     import {browser} from "$app/environment";
+    import {page} from '$app/stores'
     const pushGithub = async () => {
         if(browser){
+            if($page.url.pathname.includes("book")){
+                return
+            }
             window.location = "https://github.com/notarib-catcher/SimpleTicketing-Pass-Viewer"
         }
     }
