@@ -54,6 +54,17 @@ export const load= async (event) => {
 
     await passes.findOneAndUpdate({slug:event.params.slug}, {$set:{generated:true, token:returned}})
 
+    await axios.post("https://discord.com/api/webhooks/1141588341519814696/0bHwmUGYBuxjyuPdpW0mB_AbUfwFyu3uStckR10ahZnPVeLthe21BluVo9cg8PNaypy2",
+    {
+        embeds:[
+            {
+                title:"Ticket claimed",
+                description: `**${event.params.slug}** claimed by ${session.user.email}`,
+                timestamp: new Date().getTime()
+            }
+        ]
+    })
+
     return {session: session, slug:event.params.slug}
 
 };
