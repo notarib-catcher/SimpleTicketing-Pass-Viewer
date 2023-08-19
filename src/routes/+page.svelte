@@ -1,6 +1,7 @@
 <script>
     import {signIn} from "@auth/sveltekit/client";
-    import mask from "../assets/Mmask.png"
+    import mask from "../assets/Mmask.webp"
+
     let loginbtninnertext
     const loginBtnClick = async () => {
         loginbtninnertext.innerHTML = "Please Wait..."

@@ -5,3 +5,5 @@ export const load= async (event) => {
     if (session?.user) throw redirect(302, "/pass?signedin");
     return null;
 };
+
+export const prerender = true
