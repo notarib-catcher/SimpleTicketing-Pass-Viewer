@@ -6,4 +6,3 @@ export const load= async (event) => {
     return null;
 };
 
-export const prerender = true
